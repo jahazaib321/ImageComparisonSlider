@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mage4_ImageComparisonSlider::comparisonslider"
+             title="Image Comparison Slider"
+             module="Mage4_ImageComparisonSlider"
+             resource="Mage4_ImageComparisonSlider::comparisonslider"
+             translate="title"
+             sortOrder="900"
+             action="storelocator"/>
+        <add id="Mage4_ImageComparisonSlider::comparisonslider1"
+             title="Manage Sliders"
+             module="Mage4_ImageComparisonSlider"
+             parent="Mage4_ImageComparisonSlider::comparisonslider"
+             action="comparisonslider/index/index"
+             sortOrder="1"
+             resource="Mage4_ImageComparisonSlider::comparisonslider"/>
+    </menu>
+</config>
+
