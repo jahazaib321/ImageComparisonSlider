@@ -3,6 +3,7 @@
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">comparisonslider_item_form.comparisonslider_item_form_data_source</item>
+            <item name="deps" xsi:type="string">comparisonslider_item_form.comparisonslider_item_form_data_source</item>
         </item>
         <item name="label" xsi:type="string" translate="true">General</item>
         <item name="template" xsi:type="string">templates/form/collapsible</item>
@@ -24,7 +25,7 @@
             <argument name="collectionFactory" xsi:type="object">Mage4\ImageComparisonSlider\Model\ResourceModel\Slider\CollectionFactory</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="submit_url" xsi:type="url" path="comparisonslider/item/save"/>
+                    <item name="submit_url" xsi:type="url" path="*/*/save"/>
                 </item>
             </argument>
         </argument>

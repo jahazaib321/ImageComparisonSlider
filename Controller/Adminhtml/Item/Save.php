@@ -19,7 +19,7 @@ class Save extends \Magento\Backend\App\Action
     public function execute()
     {
         $this->sliderFactory->create()
-            ->setData($this->getRequest()->getPostValue()['general'])
+            ->setData($this->getRequest()->getPostValue('general'))
             ->save();
         return $this->resultRedirectFactory->create()->setPath('comparisonslider/index/index');
     }
