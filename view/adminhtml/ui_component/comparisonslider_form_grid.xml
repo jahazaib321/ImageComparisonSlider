@@ -111,19 +111,15 @@
                 </item>
             </argument>
         </column>
-        <column name="comparison_direction">
+        <column name="comparison_direction" component="Magento_Ui/js/grid/columns/select">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Mage4\ImageComparisonSlider\Model\Source\ComparisonOptions</item>
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="dataType" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">Comparison Direction</item>
-                    <item name="sortOrder" xsi:type="number">40</item>
-                    <item name="editor" xsi:type="array">
-                        <item name="editorType" xsi:type="string">text</item>
-                        <item name="validation" xsi:type="array">
-                            <item name="required" xsi:type="boolean">true</item>
-                        </item>
-                    </item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="dataScope" xsi:type="string">comparison_direction</item>
+                    <item name="default" xsi:type="string">0</item>
                 </item>
             </argument>
         </column>
@@ -239,19 +235,15 @@
                 </item>
             </argument>
         </column>
-        <column name="cursor">
+        <column name="cursor" component="Magento_Ui/js/grid/columns/select">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Mage4\ImageComparisonSlider\Model\Source\CursorOptions</item>
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="dataType" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">Cursor</item>
-                    <item name="sortOrder" xsi:type="number">40</item>
-                    <item name="editor" xsi:type="array">
-                        <item name="editorType" xsi:type="string">text</item>
-                        <item name="validation" xsi:type="array">
-                            <item name="required" xsi:type="boolean">true</item>
-                        </item>
-                    </item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="dataScope" xsi:type="string">cursor</item>
+                    <item name="default" xsi:type="string">0</item>
                 </item>
             </argument>
         </column>

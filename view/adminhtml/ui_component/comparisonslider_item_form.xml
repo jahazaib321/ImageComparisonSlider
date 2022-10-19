@@ -6,26 +6,24 @@
             <item name="deps" xsi:type="string">comparisonslider_item_form.comparisonslider_item_form_data_source</item>
         </item>
         <item name="label" xsi:type="string" translate="true">General</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
         <item name="config" xsi:type="array">
             <item name="dataScope" xsi:type="string">data</item>
             <item name="namespace" xsi:type="string">comparisonslider_item_form</item>
         </item>
+
         <item name="buttons" xsi:type="array">
             <item name="save" xsi:type="array">
                 <item name="name" xsi:type="string">save</item>
-                <item name="label" xsi:type="string" translate="true">Save</item>
+                <item name="label" xsi:type="string" translate="true">Saves</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/save</item>
+                <item name="url" xsi:type="string">*/item/save</item>
             </item>
             <item name="back" xsi:type="array">
                 <item name="name" xsi:type="string">back</item>
                 <item name="label" xsi:type="string" translate="true">Back</item>
                 <item name="url" xsi:type="string">comparisonslider/index/index</item>
             </item>
-        </item>
-        <item name="layout" xsi:type="array">
-            <item name="type" xsi:type="string">tabs</item>
-            <item name="navContainerName" xsi:type="string">left</item>
         </item>
     </argument>
     <settings>
@@ -46,7 +44,7 @@
             <argument name="collectionFactory" xsi:type="object">Mage4\ImageComparisonSlider\Model\ResourceModel\Slider\CollectionFactory</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="submit_url" xsi:type="url" path="comparisonslider/item/save"/>
+                    <item name="submit_url" xsi:type="url" path="*/item/save"/>
                 </item>
             </argument>
         </argument>
