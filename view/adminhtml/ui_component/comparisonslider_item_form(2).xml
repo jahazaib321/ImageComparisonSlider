@@ -6,10 +6,7 @@
             <item name="deps" xsi:type="string">comparisonslider_item_form.comparisonslider_item_form_data_source</item>
         </item>
         <item name="label" xsi:type="string" translate="true">General</item>
-        <item name="config" xsi:type="array">
-            <item name="dataScope" xsi:type="string">data</item>
-            <item name="namespace" xsi:type="string">comparisonslider_item_form</item>
-        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
         <item name="buttons" xsi:type="array">
             <item name="save" xsi:type="array">
                 <item name="name" xsi:type="string">save</item>
@@ -23,20 +20,7 @@
                 <item name="url" xsi:type="string">comparisonslider/index/index</item>
             </item>
         </item>
-        <item name="layout" xsi:type="array">
-            <item name="type" xsi:type="string">tabs</item>
-            <item name="navContainerName" xsi:type="string">left</item>
-        </item>
     </argument>
-    <settings>
-        <buttons>
-        </buttons>
-        <namespace>comparisonslider_data_form</namespace>
-        <dataScope>data</dataScope>
-        <deps>
-            <dep>comparisonslider_item_form.comparisonslider_item_form_data_source</dep>
-        </deps>
-    </settings>
     <dataSource name="comparisonslider_item_form_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Mage4\ImageComparisonSlider\Ui\DataProvider</argument>
@@ -46,7 +30,7 @@
             <argument name="collectionFactory" xsi:type="object">Mage4\ImageComparisonSlider\Model\ResourceModel\Slider\CollectionFactory</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="submit_url" xsi:type="url" path="comparisonslider/item/save"/>
+                    <item name="submit_url" xsi:type="url" path="*/*/save"/>
                 </item>
             </argument>
         </argument>
@@ -57,11 +41,9 @@
         </argument>
     </dataSource>
     <fieldset name="general">
-        <argument name="data" xsi:type="array">
-            <item name="config" xsi:type="array">
-                <item name="label" xsi:type="string" translate="true">Comparison Slider Form</item>
-            </item>
-        </argument>
+        <settings>
+            <label/>
+        </settings>
         <field name="id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -259,55 +241,7 @@
                 </item>
             </argument>
         </field>
-<!--        <field name="image">-->
-<!--            <argument name="data" xsi:type="array">-->
-<!--                <item name="config" xsi:type="array">-->
-<!--                    <item name="dataType" xsi:type="string">string</item>-->
-<!--                    <item name="label" xsi:type="string" translate="true">Image</item>-->
-<!--                    <item name="formElement" xsi:type="string">imageUploader</item>-->
-<!--                    <item name="maxFileSize" xsi:type="string">2097152</item>-->
-<!--                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>-->
-<!--                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>-->
-<!--                    <item name="sortOrder" xsi:type="number">10</item>-->
-<!--                    <item name="required" xsi:type="boolean">true</item>-->
-<!--                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>-->
-<!--                    <item name="uploaderConfig" xsi:type="array">-->
-<!--                        <item name="url" xsi:type="url" path="storelocator/index/upload"/>-->
-<!--                    </item>-->
-<!--                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>-->
-<!--                </item>-->
-<!--            </argument>-->
-<!--        </field>-->
+
+
     </fieldset>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

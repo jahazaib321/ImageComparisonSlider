@@ -3,7 +3,7 @@
     <table name="mage4_comparisonslider_managesliders" resource="default" engine="innodb" comment="Image Comparison Manage Sliders">
         <column xsi:type="int" name="id" padding="7" nullable="false" identity="true" comment="Item ID" />
         <column xsi:type="text" name="set_title" nullable="false" comment="Set Title"/>
-        <column xsi:type="int" name="comparison_direction" nullable="false" comment="Comparison Direction" />
+        <column xsi:type="text" name="comparison_direction" nullable="false" comment="Comparison Direction" />
         <column xsi:type="int" name="drag_from" nullable="false" comment="Drag From" />
         <column xsi:type="int" name="max_drag" nullable="false" comment="Max Drag" />
         <column xsi:type="int" name="min_drag" nullable="false" comment="Min Drag" />
@@ -11,7 +11,7 @@
         <column xsi:type="text" name="icon_color" nullable="false" comment="Icon Color"/>
         <column xsi:type="text" name="line_color" nullable="false" comment="Line Color"/>
         <column xsi:type="int" name="button_radius" nullable="false" comment="Button Radius" />
-        <column xsi:type="int" name="cursor" nullable="false" comment="Cursor" />
+        <column xsi:type="text" name="cursor" nullable="false" comment="Cursor" />
         <column xsi:type="boolean" name="buttons" nullable="false" comment="Buttons" />
         <column xsi:type="text" name="buttons_text_after" nullable="false" comment="Buttons Text After"/>
         <column xsi:type="text" name="buttons_text_before" nullable="false" comment="Buttons Text Before"/>

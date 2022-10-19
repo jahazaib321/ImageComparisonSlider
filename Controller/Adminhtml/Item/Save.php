@@ -27,10 +27,10 @@ class Save extends Action
     public function execute()
     {
         $data = $this->getRequest()->getPost('general');
+//        dd($data);
         $model = $this->sliderFactory->create();
         $id = $this->getRequest()->getParam('id');
         $model->load($id);
-        dd($data);
 //        $data = $this->sliderFactory->create()
 //            ->setData($this->getRequest()->getPostValue('general'))
 //            ->save();
