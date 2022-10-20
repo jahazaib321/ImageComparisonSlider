@@ -5,7 +5,7 @@ namespace Mage4\ImageComparisonSlider\Model;
  * Class Slider
  */
 class Slider extends \Magento\Framework\Model\AbstractModel implements
-    \Mage4\StoreLocator\Api\Data\StoreInterface,
+    \Mage4\ImageComparisonSlider\Api\Data\SliderInterface,
     \Magento\Framework\DataObject\IdentityInterface
 {
     const CACHE_TAG = 'image_comparison_slider';
