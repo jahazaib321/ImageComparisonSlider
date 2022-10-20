@@ -100,6 +100,108 @@
                 </item>
             </argument>
         </field>
+
+
+        <field name="desktop_image1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="label" xsi:type="string" translate="true">Desktop Image 1</item>
+                    <item name="formElement" xsi:type="string">imageUploader</item>
+                    <item name="maxFileSize" xsi:type="string">2097152</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="comparisonslider/index/upload"/>
+                    </item>
+                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="desktop_image2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="label" xsi:type="string" translate="true">Desktop Image 2</item>
+                    <item name="formElement" xsi:type="string">imageUploader</item>
+                    <item name="maxFileSize" xsi:type="string">2097152</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="sortOrder" xsi:type="number">11</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="comparisonslider/index/upload"/>
+                    </item>
+                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="mobile_image1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="label" xsi:type="string" translate="true">Mobile Image 1</item>
+                    <item name="formElement" xsi:type="string">imageUploader</item>
+                    <item name="maxFileSize" xsi:type="string">2097152</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="sortOrder" xsi:type="number">12</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="comparisonslider/index/upload"/>
+                    </item>
+                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="mobile_image2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="label" xsi:type="string" translate="true">Mobile Image 2</item>
+                    <item name="formElement" xsi:type="string">imageUploader</item>
+                    <item name="maxFileSize" xsi:type="string">2097152</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="comparisonslider/index/upload"/>
+                    </item>
+                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="drag_icon">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="label" xsi:type="string" translate="true">Drag Icon</item>
+                    <item name="formElement" xsi:type="string">imageUploader</item>
+                    <item name="maxFileSize" xsi:type="string">2097152</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="comparisonslider/index/upload"/>
+                    </item>
+                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>
+                </item>
+            </argument>
+        </field>
+
         <field name="drag_from">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -257,25 +359,6 @@
                 </item>
             </argument>
         </field>
-<!--        <field name="image">-->
-<!--            <argument name="data" xsi:type="array">-->
-<!--                <item name="config" xsi:type="array">-->
-<!--                    <item name="dataType" xsi:type="string">string</item>-->
-<!--                    <item name="label" xsi:type="string" translate="true">Image</item>-->
-<!--                    <item name="formElement" xsi:type="string">imageUploader</item>-->
-<!--                    <item name="maxFileSize" xsi:type="string">2097152</item>-->
-<!--                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>-->
-<!--                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>-->
-<!--                    <item name="sortOrder" xsi:type="number">10</item>-->
-<!--                    <item name="required" xsi:type="boolean">true</item>-->
-<!--                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>-->
-<!--                    <item name="uploaderConfig" xsi:type="array">-->
-<!--                        <item name="url" xsi:type="url" path="storelocator/index/upload"/>-->
-<!--                    </item>-->
-<!--                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>-->
-<!--                </item>-->
-<!--            </argument>-->
-<!--        </field>-->
     </fieldset>
 </form>
 
