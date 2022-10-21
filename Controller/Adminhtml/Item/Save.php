@@ -2,14 +2,12 @@
 
 namespace Mage4\ImageComparisonSlider\Controller\Adminhtml\Item;
 
-use Mage4\ImageComparisonSlider\Api\Data\SliderInterface;
 use Mage4\ImageComparisonSlider\Model\ImageUploader;
 use Mage4\ImageComparisonSlider\Model\SliderFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Api\DataObjectHelper;
 use Magento\Framework\Exception\LocalizedException;
-use Magento\Framework\Model\AbstractModel;
 
 class Save extends Action
 {
@@ -59,9 +57,7 @@ class Save extends Action
                 $this->messageManager->addSuccessMessage(__('You saved this data.'));
                 $this->_getSession()->setFormData(false);
                 if ($this->getRequest()->getParam('back')) {
-                    return $resultRedirect->setPath('*/*/editaction', ['id' => $model->getId(), '_current' => true]);
                 }
-                return $resultRedirect->setPath('*/index/editaction/', ['id' => $slide['parent_id'], '_current' => true]);
             } catch (\Magento\Framework\Exception\LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\RuntimeException $e) {
@@ -71,9 +67,8 @@ class Save extends Action
             }
 
             $this->_getSession()->setFormData($slide);
-            return $resultRedirect->setPath('*/*/editaction', ['id' => $this->getRequest()->getParam('id')]);
+            return $resultRedirect->setPath('comparisonslider/index/index', ['id' => $this->getRequest()->getParam('id')]);
         }
-        return $resultRedirect->setPath('*/*/');
     }
 
     public function desktop_image1(array $rawData)
@@ -146,4 +141,3 @@ class Save extends Action
         return $slide;
     }
 }
-
