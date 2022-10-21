@@ -297,12 +297,12 @@
         </column>
 
 
-        <column name="desktop_image" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
+        <column name="before_desktop_image" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
                     <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">Desktop Images</item>
+                    <item name="label" xsi:type="string" translate="true">Before Image(Desktop)</item>
                     <item name="sortOrder" xsi:type="number">13</item>
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
@@ -310,19 +310,39 @@
                 </item>
             </argument>
             <settings>
-                <label translate="true">Desktop Images</label>
+                <label translate="true">Before Image(Desktop)</label>
                 <hasPreview>1</hasPreview>
                 <sortable>false</sortable>
             </settings>
         </column>
 
 
-        <column name="mobile_image" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
+        <column name="after_desktop_image" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
                     <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">Mobile Images</item>
+                    <item name="label" xsi:type="string" translate="true">After Image(Desktop)</item>
+                    <item name="sortOrder" xsi:type="number">13</item>
+                    <item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">text</item>
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">After Image(Desktop)</label>
+                <hasPreview>1</hasPreview>
+                <sortable>false</sortable>
+            </settings>
+        </column>
+
+
+        <column name="before_mobile_image" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">Before Image(Mobile)</item>
                     <item name="sortOrder" xsi:type="number">14</item>
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
@@ -330,32 +350,31 @@
                 </item>
             </argument>
             <settings>
-                <label translate="true">Mobile Images</label>
+                <label translate="true">Before Image(Mobile)</label>
                 <hasPreview>1</hasPreview>
                 <sortable>false</sortable>
             </settings>
         </column>
 
 
-        <column name="drag_icon" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
+        <column name="after_mobile_image" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
                     <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">Drag Icon</item>
-                    <item name="sortOrder" xsi:type="number">15</item>
+                    <item name="label" xsi:type="string" translate="true">After Image(Mobile)</item>
+                    <item name="sortOrder" xsi:type="number">14</item>
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
                     </item>
                 </item>
             </argument>
             <settings>
-                <label translate="true">Drag Icon</label>
+                <label translate="true">After Image(Mobile)</label>
                 <hasPreview>1</hasPreview>
                 <sortable>false</sortable>
             </settings>
         </column>
-
 
 
         <actionsColumn class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Columns\Actions" name="actions">

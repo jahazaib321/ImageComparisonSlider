@@ -95,7 +95,6 @@
                     <item name="label" xsi:type="string" translate="true">Comparison Direction</item>
                     <item name="notice" xsi:type="string" translate="true">this Slider is Vertical! (false is default value)</item>
                     <item name="formElement" xsi:type="string">select</item>
-                    <item name="caption" xsi:type="string">--Please Select--</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">false</item>
                     </item>
@@ -104,11 +103,11 @@
         </field>
 
 
-        <field name="desktop_image">
+        <field name="before_desktop_image">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">string</item>
-                    <item name="label" xsi:type="string" translate="true">Desktop Images</item>
+                    <item name="label" xsi:type="string" translate="true">Before Image(Desktop)</item>
                     <item name="formElement" xsi:type="string">imageUploader</item>
                     <item name="maxFileSize" xsi:type="string">2097152</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
@@ -124,12 +123,11 @@
             </argument>
         </field>
 
-
-        <field name="mobile_image">
+        <field name="after_desktop_image">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">string</item>
-                    <item name="label" xsi:type="string" translate="true">Mobile Images</item>
+                    <item name="label" xsi:type="string" translate="true">After Image(Desktop)</item>
                     <item name="formElement" xsi:type="string">imageUploader</item>
                     <item name="maxFileSize" xsi:type="string">2097152</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
@@ -146,11 +144,11 @@
         </field>
 
 
-        <field name="drag_icon">
+        <field name="before_mobile_image">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">string</item>
-                    <item name="label" xsi:type="string" translate="true">Drag Icon</item>
+                    <item name="label" xsi:type="string" translate="true">Before Image(Mobile)</item>
                     <item name="formElement" xsi:type="string">imageUploader</item>
                     <item name="maxFileSize" xsi:type="string">2097152</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
@@ -166,10 +164,32 @@
             </argument>
         </field>
 
+
+        <field name="after_mobile_image">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="label" xsi:type="string" translate="true">After Image(Mobile)</item>
+                    <item name="formElement" xsi:type="string">imageUploader</item>
+                    <item name="maxFileSize" xsi:type="string">2097152</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="sortOrder" xsi:type="number">5</item>
+                    <item name="required" xsi:type="boolean">true</item>
+                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="comparisonslider/index/upload"/>
+                    </item>
+                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>
+                </item>
+            </argument>
+        </field>
+
+
         <field name="drag_from">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">6</item>
+                    <item name="sortOrder" xsi:type="number">7</item>
                     <item name="label" xsi:type="string" translate="true">Drag From</item>
                     <item name="notice" xsi:type="string" translate="true">Percent % of before Image</item>
                     <item name="formElement" xsi:type="string">input</item>

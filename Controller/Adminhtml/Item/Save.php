@@ -45,9 +45,10 @@ class Save extends Action
                 $model = $this->sliderFactory->create();
                 unset($slide['id']);
             }
-            $slide = $this->desktop_image($slide);
-            $slide = $this->mobile_image($slide);
-            $slide = $this->drag_icon($slide);
+            $slide = $this->before_desktop_image($slide);
+            $slide = $this->after_desktop_image($slide);
+            $slide = $this->before_mobile_image($slide);
+            $slide = $this->after_mobile_image($slide);
 
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
@@ -69,46 +70,61 @@ class Save extends Action
         }
     }
 
-    public function desktop_image(array $rawData)
+    public function before_desktop_image(array $rawData)
     {
         $slide = $rawData;
-        if (isset($slide['desktop_image'][0]['tmp_name'])) {
-            $slide['desktop_image'] = $slide['desktop_image'][0]['name'];
-            $slide['desktop_image'] = $this->imageUploader->moveFileFromTmp($slide['desktop_image']);
-        } elseif (isset($slide['desktop_image'][0]['name'])) {
-            $slide['desktop_image'] = $slide['desktop_image'][0]['name'];
+        if (isset($slide['before_desktop_image'][0]['tmp_name'])) {
+            $slide['before_desktop_image'] = $slide['before_desktop_image'][0]['name'];
+            $slide['before_desktop_image'] = $this->imageUploader->moveFileFromTmp($slide['before_desktop_image']);
+        } elseif (isset($slide['before_desktop_image'][0]['name'])) {
+            $slide['before_desktop_image'] = $slide['before_desktop_image'][0]['name'];
         } else {
-            $slide['desktop_image'] = null;
+            $slide['before_desktop_image'] = null;
         }
         return $slide;
     }
 
 
-    public function mobile_image(array $rawData)
+    public function after_desktop_image(array $rawData)
     {
         $slide = $rawData;
-        if (isset($slide['mobile_image'][0]['tmp_name'])) {
-            $slide['mobile_image'] = $slide['mobile_image'][0]['name'];
-            $slide['mobile_image'] = $this->imageUploader->moveFileFromTmp($slide['mobile_image']);
-        } elseif (isset($slide['mobile_image'][0]['name'])) {
-            $slide['mobile_image'] = $slide['mobile_image'][0]['name'];
+        if (isset($slide['after_desktop_image'][0]['tmp_name'])) {
+            $slide['after_desktop_image'] = $slide['after_desktop_image'][0]['name'];
+            $slide['after_desktop_image'] = $this->imageUploader->moveFileFromTmp($slide['after_desktop_image']);
+        } elseif (isset($slide['after_desktop_image'][0]['name'])) {
+            $slide['after_desktop_image'] = $slide['after_desktop_image'][0]['name'];
         } else {
-            $slide['mobile_image'] = null;
+            $slide['after_desktop_image'] = null;
         }
         return $slide;
     }
 
 
-    public function drag_icon(array $rawData)
+    public function before_mobile_image(array $rawData)
     {
         $slide = $rawData;
-        if (isset($slide['drag_icon'][0]['tmp_name'])) {
-            $slide['drag_icon'] = $slide['drag_icon'][0]['name'];
-            $slide['drag_icon'] = $this->imageUploader->moveFileFromTmp($slide['drag_icon']);
-        } elseif (isset($slide['drag_icon'][0]['name'])) {
-            $slide['drag_icon'] = $slide['drag_icon'][0]['name'];
+        if (isset($slide['before_mobile_image'][0]['tmp_name'])) {
+            $slide['before_mobile_image'] = $slide['before_mobile_image'][0]['name'];
+            $slide['before_mobile_image'] = $this->imageUploader->moveFileFromTmp($slide['before_mobile_image']);
+        } elseif (isset($slide['before_mobile_image'][0]['name'])) {
+            $slide['before_mobile_image'] = $slide['before_mobile_image'][0]['name'];
         } else {
-            $slide['drag_icon'] = null;
+            $slide['before_mobile_image'] = null;
+        }
+        return $slide;
+    }
+
+
+    public function after_mobile_image(array $rawData)
+    {
+        $slide = $rawData;
+        if (isset($slide['after_mobile_image'][0]['tmp_name'])) {
+            $slide['after_mobile_image'] = $slide['after_mobile_image'][0]['name'];
+            $slide['after_mobile_image'] = $this->imageUploader->moveFileFromTmp($slide['after_mobile_image']);
+        } elseif (isset($slide['after_mobile_image'][0]['name'])) {
+            $slide['after_mobile_image'] = $slide['after_mobile_image'][0]['name'];
+        } else {
+            $slide['after_mobile_image'] = null;
         }
         return $slide;
     }

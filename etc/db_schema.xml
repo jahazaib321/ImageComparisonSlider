@@ -3,9 +3,10 @@
     <table name="mage4_comparisonslider_managesliders" resource="default" engine="innodb" comment="Image Comparison Manage Sliders">
         <column xsi:type="int" name="id" padding="7" nullable="false" identity="true" comment="Item ID" />
         <column xsi:type="text" name="set_title" nullable="false" comment="Set Title"/>
-        <column xsi:type="text" name="desktop_image" nullable="false" />
-        <column xsi:type="text" name="mobile_image" nullable="false" />
-        <column xsi:type="text" name="drag_icon" nullable="false" />
+        <column xsi:type="text" name="before_desktop_image" nullable="false" />
+        <column xsi:type="text" name="after_desktop_image" nullable="false" />
+        <column xsi:type="text" name="before_mobile_image" nullable="false" />
+        <column xsi:type="text" name="after_mobile_image" nullable="false" />
         <column xsi:type="text" name="comparison_direction" nullable="false" comment="Comparison Direction" />
         <column xsi:type="int" name="drag_from" nullable="false" comment="Drag From" />
         <column xsi:type="int" name="max_drag" nullable="false" comment="Max Drag" />
