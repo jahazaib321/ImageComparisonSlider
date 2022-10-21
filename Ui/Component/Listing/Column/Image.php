@@ -46,10 +46,10 @@ class Image extends Column
         $mediaUrl = $this->storeManager->getStore()->getBaseUrl(UrlInterface::URL_TYPE_MEDIA);
 
         if (isset($dataSource['data']['items'])) {
-            $fieldName = 'image';
+            $fieldName = 'desktop_image1';
             foreach ($dataSource['data']['items'] as & $item) {
-                if (!empty($item['image'])) {
-                    $name = $item['image'];
+                if (!empty($item['desktop_image1'])) {
+                    $name = $item['desktop_image1'];
                     $item[$fieldName . '_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
                     $item[$fieldName . '_alt'] = '';
                     $item[$fieldName . '_link'] = $this->url->getUrl(static::URL_PATH_EDIT, [
@@ -59,6 +59,67 @@ class Image extends Column
                 }
             }
         }
+
+        if (isset($dataSource['data']['items'])) {
+            $fieldName = 'desktop_image2';
+            foreach ($dataSource['data']['items'] as & $item) {
+                if (!empty($item['desktop_image2'])) {
+                    $name = $item['desktop_image2'];
+                    $item[$fieldName . '_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                    $item[$fieldName . '_alt'] = '';
+                    $item[$fieldName . '_link'] = $this->url->getUrl(static::URL_PATH_EDIT, [
+                        'id' => $item['id']
+                    ]);
+                    $item[$fieldName . '_orig_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                }
+            }
+        }
+
+        if (isset($dataSource['data']['items'])) {
+            $fieldName = 'mobile_image1';
+            foreach ($dataSource['data']['items'] as & $item) {
+                if (!empty($item['mobile_image1'])) {
+                    $name = $item['mobile_image1'];
+                    $item[$fieldName . '_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                    $item[$fieldName . '_alt'] = '';
+                    $item[$fieldName . '_link'] = $this->url->getUrl(static::URL_PATH_EDIT, [
+                        'id' => $item['id']
+                    ]);
+                    $item[$fieldName . '_orig_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                }
+            }
+        }
+
+        if (isset($dataSource['data']['items'])) {
+            $fieldName = 'mobile_image2';
+            foreach ($dataSource['data']['items'] as & $item) {
+                if (!empty($item['mobile_image2'])) {
+                    $name = $item['mobile_image2'];
+                    $item[$fieldName . '_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                    $item[$fieldName . '_alt'] = '';
+                    $item[$fieldName . '_link'] = $this->url->getUrl(static::URL_PATH_EDIT, [
+                        'id' => $item['id']
+                    ]);
+                    $item[$fieldName . '_orig_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                }
+            }
+        }
+
+        if (isset($dataSource['data']['items'])) {
+            $fieldName = 'drag_icon';
+            foreach ($dataSource['data']['items'] as & $item) {
+                if (!empty($item['drag_icon'])) {
+                    $name = $item['drag_icon'];
+                    $item[$fieldName . '_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                    $item[$fieldName . '_alt'] = '';
+                    $item[$fieldName . '_link'] = $this->url->getUrl(static::URL_PATH_EDIT, [
+                        'id' => $item['id']
+                    ]);
+                    $item[$fieldName . '_orig_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                }
+            }
+        }
+
         return $dataSource;
     }
 }
