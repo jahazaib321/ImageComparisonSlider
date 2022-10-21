@@ -59,9 +59,9 @@ class Save extends Action
                 $this->messageManager->addSuccessMessage(__('You saved this data.'));
                 $this->_getSession()->setFormData(false);
                 if ($this->getRequest()->getParam('back')) {
-                    return $resultRedirect->setPath('*/*/edit', ['id' => $model->getId(), '_current' => true]);
+                    return $resultRedirect->setPath('*/*/editaction', ['id' => $model->getId(), '_current' => true]);
                 }
-                return $resultRedirect->setPath('*/index/edit/', ['id' => $slide['parent_id'], '_current' => true]);
+                return $resultRedirect->setPath('*/index/editaction/', ['id' => $slide['parent_id'], '_current' => true]);
             } catch (\Magento\Framework\Exception\LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\RuntimeException $e) {
@@ -71,7 +71,7 @@ class Save extends Action
             }
 
             $this->_getSession()->setFormData($slide);
-            return $resultRedirect->setPath('*/*/edit', ['id' => $this->getRequest()->getParam('id')]);
+            return $resultRedirect->setPath('*/*/editaction', ['id' => $this->getRequest()->getParam('id')]);
         }
         return $resultRedirect->setPath('*/*/');
     }
