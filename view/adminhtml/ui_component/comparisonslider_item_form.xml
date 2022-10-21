@@ -174,7 +174,7 @@
                     <item name="maxFileSize" xsi:type="string">2097152</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
                     <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
-                    <item name="sortOrder" xsi:type="number">5</item>
+                    <item name="sortOrder" xsi:type="number">6</item>
                     <item name="required" xsi:type="boolean">true</item>
                     <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
                     <item name="uploaderConfig" xsi:type="array">
@@ -195,7 +195,7 @@
                     <item name="maxFileSize" xsi:type="string">2097152</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
                     <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
-                    <item name="sortOrder" xsi:type="number">5</item>
+                    <item name="sortOrder" xsi:type="number">7</item>
                     <item name="required" xsi:type="boolean">true</item>
                     <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
                     <item name="uploaderConfig" xsi:type="array">
@@ -210,7 +210,7 @@
         <field name="drag_from">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">7</item>
+                    <item name="sortOrder" xsi:type="number">8</item>
                     <item name="label" xsi:type="string" translate="true">Drag From</item>
                     <item name="notice" xsi:type="string" translate="true">Percent % of before Image</item>
                     <item name="formElement" xsi:type="string">input</item>
@@ -225,7 +225,7 @@
         <field name="max_drag">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">7</item>
+                    <item name="sortOrder" xsi:type="number">9</item>
                     <item name="label" xsi:type="string" translate="true">Max Drag</item>
                     <item name="notice" xsi:type="string" translate="true">Max drag from right or bottom if vertical</item>
                     <item name="formElement" xsi:type="string">input</item>
@@ -240,7 +240,7 @@
         <field name="min_drag">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">8</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
                     <item name="label" xsi:type="string" translate="true">Min Drag</item>
                     <item name="notice" xsi:type="string" translate="true">Min drag from left or top if vertical</item>
                     <item name="formElement" xsi:type="string">input</item>
@@ -255,7 +255,7 @@
         <field name="icon_size">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">9</item>
+                    <item name="sortOrder" xsi:type="number">11</item>
                     <item name="label" xsi:type="string" translate="true">Icon Size</item>
                     <item name="notice" xsi:type="string" translate="true">Icon size</item>
                     <item name="formElement" xsi:type="string">input</item>
@@ -270,7 +270,7 @@
         <field name="icon_color">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="sortOrder" xsi:type="number">11</item>
                     <item name="label" xsi:type="string" translate="true">Icon Color</item>
                     <item name="notice" xsi:type="string" translate="true">Icon color</item>
                     <item name="dataType" xsi:type="string">text</item>
@@ -284,7 +284,7 @@
         <field name="line_color">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">11</item>
+                    <item name="sortOrder" xsi:type="number">12</item>
                     <item name="label" xsi:type="string" translate="true">Line Color</item>
                     <item name="notice" xsi:type="string" translate="true">Line color</item>
                     <item name="dataType" xsi:type="string">text</item>
@@ -298,7 +298,7 @@
         <field name="button_radius">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">12</item>
+                    <item name="sortOrder" xsi:type="number">13</item>
                     <item name="label" xsi:type="string" translate="true">Button Radius</item>
                     <item name="notice" xsi:type="string" translate="true">Line Button Radius</item>
                     <item name="dataType" xsi:type="string">text</item>
@@ -314,7 +314,7 @@
                 <item name="options" xsi:type="object">Mage4\ImageComparisonSlider\Model\Source\CursorOptions</item>
                 <item name="config" xsi:type="array">
                     <item name="datatype" xsi:type="string">text</item>
-                    <item name="sortOrder" xsi:type="number">13</item>
+                    <item name="sortOrder" xsi:type="number">14</item>
                     <item name="label" xsi:type="string" translate="true">Cursor</item>
                     <item name="notice" xsi:type="string" translate="true">Cursor style on button hover</item>
                     <item name="formElement" xsi:type="string">select</item>
@@ -328,7 +328,7 @@
         <field name="buttons">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">14</item>
+                    <item name="sortOrder" xsi:type="number">15</item>
                     <item name="dataType" xsi:type="string">boolean</item>
                     <item name="formElement" xsi:type="string">checkbox</item>
                     <item name="prefer" xsi:type="string">toggle</item>
@@ -349,7 +349,7 @@
         <field name="buttons_text_after">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">15</item>
+                    <item name="sortOrder" xsi:type="number">16</item>
                     <item name="label" xsi:type="string" translate="true">Buttons Text After</item>
                     <item name="notice" xsi:type="string" translate="true">Buttons Text After</item>
                     <item name="dataType" xsi:type="string">text</item>
@@ -363,7 +363,7 @@
         <field name="buttons_text_before">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">16</item>
+                    <item name="sortOrder" xsi:type="number">17</item>
                     <item name="label" xsi:type="string" translate="true">Buttons Text Before</item>
                     <item name="notice" xsi:type="string" translate="true">Buttons Text Before</item>
                     <item name="dataType" xsi:type="string">text</item>
