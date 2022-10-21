@@ -297,12 +297,12 @@
         </column>
 
 
-        <column name="desktop_image1" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
+        <column name="desktop_image" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
                     <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">Desktop Image 1</item>
+                    <item name="label" xsi:type="string" translate="true">Desktop Image</item>
                     <item name="sortOrder" xsi:type="number">57</item>
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
@@ -310,18 +310,19 @@
                 </item>
             </argument>
             <settings>
-                <label translate="true">Desktop Image 1</label>
+                <label translate="true">Desktop Image</label>
                 <hasPreview>1</hasPreview>
                 <sortable>false</sortable>
             </settings>
         </column>
 
-        <column name="desktop_image2" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
+
+        <column name="mobile_image" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
                     <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">Desktop Image 2</item>
+                    <item name="label" xsi:type="string" translate="true">Mobile Image</item>
                     <item name="sortOrder" xsi:type="number">57</item>
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
@@ -329,50 +330,12 @@
                 </item>
             </argument>
             <settings>
-                <label translate="true">Desktop Image 2</label>
+                <label translate="true">Mobile Image</label>
                 <hasPreview>1</hasPreview>
                 <sortable>false</sortable>
             </settings>
         </column>
 
-        <column name="mobile_image1" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">Mobile Image 1</item>
-                    <item name="sortOrder" xsi:type="number">57</item>
-                    <item name="editor" xsi:type="array">
-                        <item name="editorType" xsi:type="string">text</item>
-                    </item>
-                </item>
-            </argument>
-            <settings>
-                <label translate="true">Mobile Image 1</label>
-                <hasPreview>1</hasPreview>
-                <sortable>false</sortable>
-            </settings>
-        </column>
-
-
-        <column name="mobile_image2" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">Mobile Image 2</item>
-                    <item name="sortOrder" xsi:type="number">57</item>
-                    <item name="editor" xsi:type="array">
-                        <item name="editorType" xsi:type="string">text</item>
-                    </item>
-                </item>
-            </argument>
-            <settings>
-                <label translate="true">Mobile Image 2</label>
-                <hasPreview>1</hasPreview>
-                <sortable>false</sortable>
-            </settings>
-        </column>
 
         <column name="drag_icon" component="Magento_Ui/js/grid/columns/thumbnail" class="Mage4\ImageComparisonSlider\Ui\Component\Listing\Column\Image">
             <argument name="data" xsi:type="array">

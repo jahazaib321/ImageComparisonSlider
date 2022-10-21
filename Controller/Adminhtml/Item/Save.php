@@ -45,10 +45,8 @@ class Save extends Action
                 $model = $this->sliderFactory->create();
                 unset($slide['id']);
             }
-            $slide = $this->desktop_image1($slide);
-            $slide = $this->desktop_image2($slide);
-            $slide = $this->mobile_image1($slide);
-            $slide = $this->mobile_image2($slide);
+            $slide = $this->desktop_image($slide);
+            $slide = $this->mobile_image($slide);
             $slide = $this->drag_icon($slide);
 
             try {
@@ -71,61 +69,35 @@ class Save extends Action
         }
     }
 
-    public function desktop_image1(array $rawData)
+    public function desktop_image(array $rawData)
     {
         $slide = $rawData;
-        if (isset($slide['desktop_image1'][0]['tmp_name'])) {
-            $slide['desktop_image1'] = $slide['desktop_image1'][0]['name'];
-            $slide['desktop_image1'] = $this->imageUploader->moveFileFromTmp($slide['desktop_image1']);
-        } elseif (isset($slide['desktop_image1'][0]['name'])) {
-            $slide['desktop_image1'] = $slide['desktop_image1'][0]['name'];
+        if (isset($slide['desktop_image'][0]['tmp_name'])) {
+            $slide['desktop_image'] = $slide['desktop_image'][0]['name'];
+            $slide['desktop_image'] = $this->imageUploader->moveFileFromTmp($slide['desktop_image']);
+        } elseif (isset($slide['desktop_image'][0]['name'])) {
+            $slide['desktop_image'] = $slide['desktop_image'][0]['name'];
         } else {
-            $slide['desktop_image1'] = null;
+            $slide['desktop_image'] = null;
         }
         return $slide;
     }
 
-    public function desktop_image2(array $rawData)
+
+    public function mobile_image(array $rawData)
     {
         $slide = $rawData;
-        if (isset($slide['desktop_image2'][0]['tmp_name'])) {
-            $slide['desktop_image2'] = $slide['desktop_image2'][0]['name'];
-            $slide['desktop_image2'] = $this->imageUploader->moveFileFromTmp($slide['desktop_image2']);
-        } elseif (isset($slide['desktop_image2'][0]['name'])) {
-            $slide['desktop_image2'] = $slide['desktop_image2'][0]['name'];
+        if (isset($slide['mobile_image'][0]['tmp_name'])) {
+            $slide['mobile_image'] = $slide['mobile_image'][0]['name'];
+            $slide['mobile_image'] = $this->imageUploader->moveFileFromTmp($slide['mobile_image']);
+        } elseif (isset($slide['mobile_image'][0]['name'])) {
+            $slide['mobile_image'] = $slide['mobile_image'][0]['name'];
         } else {
-            $slide['desktop_image2'] = null;
+            $slide['mobile_image'] = null;
         }
         return $slide;
     }
 
-    public function mobile_image1(array $rawData)
-    {
-        $slide = $rawData;
-        if (isset($slide['mobile_image1'][0]['tmp_name'])) {
-            $slide['mobile_image1'] = $slide['mobile_image1'][0]['name'];
-            $slide['mobile_image1'] = $this->imageUploader->moveFileFromTmp($slide['mobile_image1']);
-        } elseif (isset($slide['mobile_image1'][0]['name'])) {
-            $slide['mobile_image1'] = $slide['mobile_image1'][0]['name'];
-        } else {
-            $slide['mobile_image1'] = null;
-        }
-        return $slide;
-    }
-
-    public function mobile_image2(array $rawData)
-    {
-        $slide = $rawData;
-        if (isset($slide['mobile_image2'][0]['tmp_name'])) {
-            $slide['mobile_image2'] = $slide['mobile_image2'][0]['name'];
-            $slide['mobile_image2'] = $this->imageUploader->moveFileFromTmp($slide['mobile_image2']);
-        } elseif (isset($slide['mobile_image2'][0]['name'])) {
-            $slide['mobile_image2'] = $slide['mobile_image2'][0]['name'];
-        } else {
-            $slide['mobile_image2'] = null;
-        }
-        return $slide;
-    }
 
     public function drag_icon(array $rawData)
     {
