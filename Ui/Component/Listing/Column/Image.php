@@ -107,6 +107,21 @@ class Image extends Column
             }
         }
 
+        if (isset($dataSource['data']['items'])) {
+            $fieldName = 'drag_icon';
+            foreach ($dataSource['data']['items'] as & $item) {
+                if (!empty($item['drag_icon'])) {
+                    $name = $item['drag_icon'];
+                    $item[$fieldName . '_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                    $item[$fieldName . '_alt'] = '';
+                    $item[$fieldName . '_link'] = $this->url->getUrl(static::URL_PATH_EDIT, [
+                        'id' => $item['id']
+                    ]);
+                    $item[$fieldName . '_orig_src'] = $mediaUrl . 'mage4/comparisonslider/image/' . $name;
+                }
+            }
+        }
+
         return $dataSource;
     }
 }

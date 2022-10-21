@@ -49,6 +49,7 @@ class Save extends Action
             $slide = $this->after_desktop_image($slide);
             $slide = $this->before_mobile_image($slide);
             $slide = $this->after_mobile_image($slide);
+            $slide = $this->drag_icon($slide);
 
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
@@ -125,6 +126,20 @@ class Save extends Action
             $slide['after_mobile_image'] = $slide['after_mobile_image'][0]['name'];
         } else {
             $slide['after_mobile_image'] = null;
+        }
+        return $slide;
+    }
+
+    public function drag_icon(array $rawData)
+    {
+        $slide = $rawData;
+        if (isset($slide['drag_icon'][0]['tmp_name'])) {
+            $slide['drag_icon'] = $slide['drag_icon'][0]['name'];
+            $slide['drag_icon'] = $this->imageUploader->moveFileFromTmp($slide['drag_icon']);
+        } elseif (isset($slide['drag_icon'][0]['name'])) {
+            $slide['drag_icon'] = $slide['drag_icon'][0]['name'];
+        } else {
+            $slide['drag_icon'] = null;
         }
         return $slide;
     }
