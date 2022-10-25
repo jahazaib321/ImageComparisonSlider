@@ -40,7 +40,7 @@ class Save extends Action
             $params = $this->getRequest()->getParams();
             $id = $params['id'];
             if ($id) {
-                $model = $this->sliderFactory->getById($id);
+                $model = $this->sliderFactory->create()->load($id);
             } else {
                 $model = $this->sliderFactory->create();
                 unset($slide['id']);

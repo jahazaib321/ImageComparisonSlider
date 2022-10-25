@@ -44,7 +44,7 @@
             <argument name="collectionFactory" xsi:type="object">Mage4\ImageComparisonSlider\Model\ResourceModel\Slider\CollectionFactory</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="submit_url" xsi:type="url" path="*/item/save"/>
+                    <item name="submit_url" xsi:type="url" path="comparisonslider/item/save"/>
                 </item>
             </argument>
         </argument>

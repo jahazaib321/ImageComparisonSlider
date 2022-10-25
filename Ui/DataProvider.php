@@ -24,16 +24,17 @@ class DataProvider extends AbstractDataProvider
         $result = [];
         foreach ($this->collection->getItems() as $item) {
             $data = $item->getData();
-            if (isset($data['image'])) {
-                $name = $data['image'];
-                unset($data['image']);
-                $data['image'][0] = [
-                    'name' => $name,
-                    'url' => 'http://jahazaib.local/pub/media/' . 'mage4/comparisonslider/image/' . $name
-                ];
-            }
-            $result[$item->getId()]['general'] = $data;
+//            if (isset($data['image'])) {
+//                $name = $data['image'];
+//                unset($data['image']);
+//                $data['image'][0] = [
+//                    'name' => $name,
+//                    'url' => 'http://jahazaib.local/pub/media/' . 'mage4/comparisonslider/image/' . $name
+//                ];
+//            }
+            $result[$item->getId()] = $data;
         }
+//        dd($result);
         return $result;
     }
 }

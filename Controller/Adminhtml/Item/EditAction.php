@@ -68,7 +68,7 @@ class EditAction extends \Magento\Backend\App\Action
     }
 
     /**
-     * @return \Magento\Backend\Model\View\Result\Page
+     * @return EditAction|\Magento\Backend\Model\View\Result\Page|\Magento\Framework\Controller\Result\Redirect
      */
     public function execute()
     {
