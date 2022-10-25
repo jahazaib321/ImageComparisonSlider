@@ -2,7 +2,7 @@
 namespace Mage4\ImageComparisonSlider\Model\ResourceModel;
 
 /**
- * Class Store
+ * Class Slider
  */
 class Slider extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {

@@ -7,7 +7,7 @@
              resource="Mage4_ImageComparisonSlider::comparisonslider"
              translate="title"
              sortOrder="900"
-             action="storelocator"/>
+             action="comparisonslider"/>
         <add id="Mage4_ImageComparisonSlider::comparisonslider1"
              title="Manage Sliders"
              module="Mage4_ImageComparisonSlider"
