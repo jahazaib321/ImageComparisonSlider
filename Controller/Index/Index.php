@@ -1,21 +1,22 @@
 <?php
 namespace Mage4\ImageComparisonSlider\Controller\Index;
 
-class Index extends \Magento\Framework\App\Action\Action
+use Magento\Framework\App\Action\Action;
+use Magento\Framework\View\Result\PageFactory;
+
+class Index extends Action
 {
     protected $_pageFactory;
-
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
-        \Magento\Framework\View\Result\PageFactory $pageFactory)
-    {
+        PageFactory $pageFactory
+    ) {
         $this->_pageFactory = $pageFactory;
         return parent::__construct($context);
     }
 
     public function execute()
     {
-        echo "Hello World";
-        exit;
+        return $this->_pageFactory->create();
     }
 }

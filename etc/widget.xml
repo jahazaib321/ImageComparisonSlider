@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="mage4_imagecomparisonslider" class="Mage4\ImageComparisonSlider\Block\Slider\Slider" >
+        <label translate="true">Mage4 Comparison Slider</label>
+        <description translate="true">Display Comparison Images</description>
+        <parameters>
+            <parameter name="id" xsi:type="block" visible="true" required="true" sort_order="10">
+                <label translate="true">Select Slider</label>
+                <block class="\Mage4\ImageComparisonSlider\Block\Adminhtml\Slider\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Slider...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
