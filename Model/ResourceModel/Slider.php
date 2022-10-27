@@ -11,7 +11,7 @@ class Slider extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
      */
     protected function _construct() // phpcs:ignore PSR2.Methods.MethodDeclaration
     {
-        $this->_init('mage4_comparisonslider_managesliders', 'id');
+        $this->_init('mage4_comparisonslider_managesliders_new', 'id');
     }
 }
 

@@ -76,7 +76,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="sortOrder" xsi:type="number">1</item>
-                    <item name="label" xsi:type="string" translate="true">Set Title</item>
+                    <item name="label" xsi:type="string" translate="true">Title</item>
                     <item name="notice" xsi:type="string" translate="true">Set Slider Title</item>
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="formElement" xsi:type="string">input</item>

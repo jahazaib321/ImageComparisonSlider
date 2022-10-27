@@ -14,7 +14,7 @@ class Collection extends \Magento\Framework\View\Element\UiComponent\DataProvide
         Logger $logger,
         FetchStrategy $fetchStrategy,
         EventManager $eventManager,
-                      $mainTable = 'mage4_comparisonslider_managesliders',
+                      $mainTable = 'mage4_comparisonslider_managesliders_new',
                       $resourceModel = 'Mage4\ImageComparisonSlider\Model\ResourceModel\Slider'
     ) {
         parent::__construct(

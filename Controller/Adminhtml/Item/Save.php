@@ -34,7 +34,7 @@ class Save extends Action
     public function execute()
     {
         $slide = $this->getRequest()->getParams();
-//        dd($slide);
+
         $resultRedirect = $this->resultRedirectFactory->create();
         if ($slide) {
             $params = $this->getRequest()->getParams();
@@ -53,11 +53,11 @@ class Save extends Action
 
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
+//                dd($slide);
                 $model->setData($slide)->save();
                 $this->messageManager->addSuccessMessage(__('You saved this data.'));
                 $this->_getSession()->setFormData(false);
-                if ($this->getRequest()->getParam('back')) {
-                }
+
             } catch (\Magento\Framework\Exception\LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\RuntimeException $e) {
@@ -82,6 +82,7 @@ class Save extends Action
         } else {
             $slide['before_desktop_image'] = null;
         }
+//        dd($slide);
         return $slide;
     }
 
