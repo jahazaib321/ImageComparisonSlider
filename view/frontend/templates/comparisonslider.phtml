@@ -1,6 +1,21 @@
 <?php
 /* @var Mage4\ImageComparisonSlider\Block\Slider\Slider $block */
+
 ?>
+
+    <?php foreach ($block->getSlider() as $slider): ?>
+    <p>
+        <?php echo $slider->getSetTitle(); ?>: <?php echo $slider->getBeforeDesktopImage(); ?>
+        <?php echo $slider->getAfterDesktopImage(); ?>: <?php echo $slider->getBeforeMobileImage(); ?>
+        <?php echo $slider->getAfterMobileImage(); ?>: <?php echo $slider->getDragIcon(); ?>
+        <?php echo $slider->getComparisonDirection(); ?>: <?php echo $slider->getDragFrom(); ?>
+        <?php echo $slider->getMaxDrag(); ?>: <?php echo $slider->getMinDrag(); ?>
+        <?php echo $slider->getIconSize(); ?>: <?php echo $slider->getIconColor(); ?>
+        <?php echo $slider->getLineColor(); ?>: <?php echo $slider->getButtonRadius(); ?>
+        <?php echo $slider->getCursor(); ?>: <?php echo $slider->getButtons(); ?>
+        <?php echo $slider->getButtonsTextAfter(); ?>: <?php echo $slider->getButtonsTextBefore(); ?>
+    </p>
+    <?php endforeach; ?>
 
 
 <div id="test"></div>

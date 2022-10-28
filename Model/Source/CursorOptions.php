@@ -17,11 +17,11 @@ class CursorOptions implements \Magento\Framework\Option\ArrayInterface
     public function getOptions()
     {
         return [
-            '0' => __('all-scroll'),
-            '1' => __('col-resize'),
-            '2' => __('default'),
-            '3' => __('grab'),
-            '4' => __('pointer'),
+            'all-scroll' => __('all-scroll'),
+            'col-resize' => __('col-resize'),
+            'default' => __('default'),
+            'grab' => __('grab'),
+            'pointer' => __('pointer'),
         ];
     }
 }
