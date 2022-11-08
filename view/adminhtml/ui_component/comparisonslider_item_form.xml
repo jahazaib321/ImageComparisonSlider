@@ -72,6 +72,7 @@
                 </item>
             </argument>
         </field>
+
         <field name="set_title">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -95,9 +96,6 @@
                     <item name="label" xsi:type="string" translate="true">Comparison Direction</item>
                     <item name="notice" xsi:type="string" translate="true">this Slider is Vertical! (false is default value)</item>
                     <item name="formElement" xsi:type="string">select</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
@@ -198,27 +196,37 @@
         </field>
 
 
+        <!--        <field name="drag_icon">-->
+        <!--            <argument name="data" xsi:type="array">-->
+        <!--                <item name="config" xsi:type="array">-->
+        <!--                    <item name="dataType" xsi:type="string">string</item>-->
+        <!--                    <item name="label" xsi:type="string" translate="true">Drag Icon</item>-->
+        <!--                    <item name="formElement" xsi:type="string">imageUploader</item>-->
+        <!--                    <item name="maxFileSize" xsi:type="string">2097152</item>-->
+        <!--                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>-->
+        <!--                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>-->
+        <!--                    <item name="sortOrder" xsi:type="number">7</item>-->
+        <!--                    <item name="required" xsi:type="boolean">true</item>-->
+        <!--                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>-->
+        <!--                    <item name="uploaderConfig" xsi:type="array">-->
+        <!--                        <item name="url" xsi:type="url" path="comparisonslider/index/upload"/>-->
+        <!--                    </item>-->
+        <!--                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>-->
+        <!--                </item>-->
+        <!--            </argument>-->
+        <!--        </field>-->
         <field name="drag_icon">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Mage4\ImageComparisonSlider\Model\Source\ComparisonIconOptions</item>
                 <item name="config" xsi:type="array">
-                    <item name="dataType" xsi:type="string">string</item>
-                    <item name="label" xsi:type="string" translate="true">Drag Icon</item>
-                    <item name="formElement" xsi:type="string">imageUploader</item>
-                    <item name="maxFileSize" xsi:type="string">2097152</item>
-                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
-                    <item name="previewTmpl" xsi:type="string">Magento_Catalog/image-preview</item>
+                    <item name="datatype" xsi:type="string">text</item>
                     <item name="sortOrder" xsi:type="number">7</item>
-                    <item name="required" xsi:type="boolean">true</item>
-                    <item name="allowedExtensions" xsi:type="string">jpg jpeg gif png svg</item>
-                    <item name="uploaderConfig" xsi:type="array">
-                        <item name="url" xsi:type="url" path="comparisonslider/index/upload"/>
-                    </item>
-                    <item name="notice" xsi:type="string"><![CDATA[Allowed file types:jpg, jpeg, png.]]></item>
+                    <item name="label" xsi:type="string" translate="true">Drag Icon</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="caption" xsi:type="string">--Please Select--</item>
                 </item>
             </argument>
         </field>
-
-
         <field name="drag_from">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -228,9 +236,6 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
@@ -243,9 +248,6 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
@@ -258,9 +260,6 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
@@ -273,40 +272,27 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
-        <field name="icon_color">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">12</item>
-                    <item name="label" xsi:type="string" translate="true">Icon Color</item>
-                    <item name="notice" xsi:type="string" translate="true">Icon color</item>
-                    <item name="dataType" xsi:type="string">text</item>
-                    <item name="formElement" xsi:type="string">input</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
-                </item>
-            </argument>
-        </field>
-        <field name="line_color">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="sortOrder" xsi:type="number">13</item>
-                    <item name="label" xsi:type="string" translate="true">Line Color</item>
-                    <item name="notice" xsi:type="string" translate="true">Line color</item>
-                    <item name="dataType" xsi:type="string">text</item>
-                    <item name="formElement" xsi:type="string">input</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
-                </item>
-            </argument>
-        </field>
+        <colorPicker name="icon_color" class="Magento\Ui\Component\Form\Element\ColorPicker" component="Magento_Ui/js/form/element/color-picker">
+            <settings>
+                <label translate="true">Icon Color</label>
+                <elementTmpl>ui/form/element/color-picker</elementTmpl>
+                <colorFormat>hex</colorFormat>
+                <colorPickerMode>noalpha</colorPickerMode>
+                <dataScope>icon_color</dataScope>
+            </settings>
+        </colorPicker>
+        <colorPicker name="line_color" class="Magento\Ui\Component\Form\Element\ColorPicker" component="Magento_Ui/js/form/element/color-picker">
+            <settings>
+                <label translate="true">Line Color</label>
+                <elementTmpl>ui/form/element/color-picker</elementTmpl>
+                <colorFormat>hex</colorFormat>
+                <colorPickerMode>noalpha</colorPickerMode>
+                <dataScope>line_color</dataScope>
+            </settings>
+        </colorPicker>
         <field name="button_radius">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -315,9 +301,6 @@
                     <item name="notice" xsi:type="string" translate="true">Line Button Radius</item>
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="formElement" xsi:type="string">input</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
@@ -331,9 +314,6 @@
                     <item name="notice" xsi:type="string" translate="true">Cursor style on button hover</item>
                     <item name="formElement" xsi:type="string">select</item>
                     <item name="caption" xsi:type="string">--Please Select--</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
@@ -355,9 +335,6 @@
                     </item>
                     <item name="default" xsi:type="number">1</item>
                     <item name="dataScope" xsi:type="string">buttons</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
@@ -369,9 +346,6 @@
                     <item name="notice" xsi:type="string" translate="true">Buttons Text After</item>
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="formElement" xsi:type="string">input</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
@@ -383,42 +357,8 @@
                     <item name="notice" xsi:type="string" translate="true">Buttons Text Before</item>
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="formElement" xsi:type="string">input</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">true</item>
-                    </item>
                 </item>
             </argument>
         </field>
     </fieldset>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
