@@ -2,49 +2,48 @@
 /* @var Mage4\ImageComparisonSlider\Block\Slider\Slider $block */
 
 ?>
+<style>
+    .box {
+        width: 50%;
+        height: 100%
+    }
 
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
-<?php //echo $block->getSlider()->getComparisonDirection(); ?>
+<div id="ImageComprasion" class="center">
+    <div id="beforeEffectslider" class="box"></div>
+</div>
 
-<div id="test"></div>
-<!--<div class="test slider"></div>-->
-
-<script>
-    require(['jquery', 'beforeEffectslider'], function($, beforeEffectslider) {
-        beforeEffectslider({
-            Selector: "#test", // Element that the slider will be build in
-            Vertical: <?php echo $block->getSlider()->getComparisonDirection(); ?>, // this Slider is Vertical! (false is default value)
-            BeforeImage: <?php echo $block->getSlider()->getBeforeDesktopImage(); ?>,
-            // Before Image
-            BeforeAlt: "Before_image", // Before Image Alt
-            AfterImage: <?php echo $block->getSlider()->getAfterDesktopImage(); ?>, // After Image
-            ImageURL: <?php echo $block->getStoreMediaPathUrl(''); ?>, // Image url
-            AftereAlt: "After_image", // After Image Alt
-            DragFrom: <?php echo $block->getSlider()->getDragFrom(); ?>, // Percent % of before Image
-            MaxDrag: <?php echo $block->getSlider()->getMaxDrag(); ?>, //Max drag from right or bottom if vertical
-            MinDrag: <?php echo $block->getSlider()->getMinDrag(); ?>, //Min drag from left or top if vertical
-            DragIcon: <?php echo $block->getSlider()->getDragIcon(); ?>, //no html, only codes
-            IconSize: <?php echo $block->getSlider()->getIconSize(); ?>, //Icon size
-            IconColor: <?php echo $block->getSlider()->getIconColor(); ?>, //Icon Color
-            LineColor: <?php echo $block->getSlider()->getLineColor(); ?>, //Line Color
-            ButtonGradient: ["#13B135", "red"], // Line Button gradient (keep same color for no gradient)
-            ButtonBorder: "none", //Line Button Border Color
-            ButtonRaduis: <?php echo $block->getSlider()->getButtonRadius(); ?>, // Line Button Raduis
-            Cursor: <?php echo $block->getSlider()->getCursor(); ?>, // Cursor style on button hover, for more: https://developer.mozilla.org/fr/docs/Web/CSS/cursor
-            Buttons: <?php echo $block->getSlider()->getButtons(); ?>, // Show before and after buttons ?
-            ButtonsText: {
-                //After Before Buttons Texts
-                after: <?php echo $block->getSlider()->getButtonsTextAfter(); ?>,
-                before: <?php echo $block->getSlider()->getButtonsTextBefore(); ?>,
-            },
-            Border: {
-                // Border properties
-                color: "black",
-                width: 0, // 0 for no border
-                style: "none",
-            },
-            //   callbackBefore: () => alert("before build"), //Callback Before building slider
-            //   callbackAfter: () => alert("after build"), //Callback After building slider
-        });
-    })
-</script>
+<script type="text/x-magento-init">
+   {
+   "#ImageComprasion": {
+       "Mage4_ImageComparisonSlider/js/comparisionslider":{
+        "Vertical": <?= $block->getSlider()->getComparisonDirection() ?? false ?>,
+      "BeforeImage": "<?= $block->getStoreMediaPathUrl($block->getSlider()->getBeforeDesktopImage()); ?>",
+      "BeforeImageMobile": "<?=$block->getStoreMediaPathUrl($block->getSlider()->getBeforeMobileImage()); ?>",
+      "BeforeAlt": "<? $block->getSlider()->getBeforeDesktopImage(); ?>",
+      "AfterImage": "<?= $block->getStoreMediaPathUrl($block->getSlider()->getAfterDesktopImage()); ?>",
+      "AfterImageMobile": "<?= $block->getStoreMediaPathUrl($block->getSlider()->getAfterMobileImage()); ?>",
+      "AftereAlt": "<?= $block->getSlider()->getAfterDesktopImage(); ?>",
+      "DragFrom": <?= $block->getSlider()->getDragFrom() ?? 50 ?>,
+      "MaxDrag": <?= $block->getSlider()->getMaxDrag() ?? 0 ?>,
+      "MinDrag": <?= $block->getSlider()->getMinDrag() ?? 30 ?>,
+      "DragIcon": "<?= $block->getSlider()->getDragIcon() ?? '↔' ?>",
+      "IconSize": <?= $block->getSlider()->getIconSize() ?? '24' ?>,
+      "IconColor": "<?= $block->getSlider()->getIconColor() ?? '#FFF' ?>",
+      "LineColor": "<?= $block->getSlider()->getLineColor() ?? '#282828' ?>",
+      "ButtonRaduis": <?= $block->getSlider()->getButtonRadius() ?? 50 ?>,
+      "Cursor": "<?= $block->getSlider()->getCursor() ?? 'ew-resize' ?>",
+      "Buttons": <?= $block->getSlider()->getButtons() ?? false ?>,
+      "ButtonsText": {
+         "after": "<?= $block->getSlider()->getButtonsTextAfter(); ?>",
+         "before": "<?=  $block->getSlider()->getButtonsTextBefore(); ?>"
+      }
+       }
+   }
+}
