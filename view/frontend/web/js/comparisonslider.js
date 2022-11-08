@@ -8,6 +8,7 @@ define(["uiComponent", "jquery", "beforeEffectslider"], function (
         image: null,
         initialize: function (config, node) {
             console.log("config", config);
+            const ID = config.ID;
             const Vertical = config.Vertical;
             const BeforeImage = config.BeforeImage;
             const BeforeImageMobile = config.BeforeImageMobile;
@@ -29,6 +30,7 @@ define(["uiComponent", "jquery", "beforeEffectslider"], function (
             const after = config.ButtonsText.after;
             const before = config.ButtonsText.before;
             this.ImageCompresion(
+                ID,
                 Vertical,
                 BeforeImage,
                 BeforeImageMobile,
@@ -53,6 +55,7 @@ define(["uiComponent", "jquery", "beforeEffectslider"], function (
         },
 
         ImageCompresion: function (
+            ID,
             Vertical,
             BeforeImage,
             BeforeImageMobile,
@@ -75,7 +78,7 @@ define(["uiComponent", "jquery", "beforeEffectslider"], function (
             before
         ) {
             beforeEffectslider({
-                Selector: "#beforeEffectslider", // Element that the slider will be build in
+                Selector:`.beforeEffectslider-${ID}`, // Element that the slider will be build in
                 Vertical: Vertical, // this Slider is Vertical! (false is default value)
                 BeforeImage: BeforeImage, // Before Image
                 BeforeImageMobile: BeforeImageMobile, //Image for mobile
@@ -90,7 +93,7 @@ define(["uiComponent", "jquery", "beforeEffectslider"], function (
                 IconSize: IconSize, //Icon size
                 IconColor: IconColor, //Icon Color
                 LineColor: LineColor, //Line Color
-                //   ButtonGradient: ButtonGradient, // Line Button gradient (keep same color for no gradient)
+                ButtonGradient: ["red", "yellow"], // Line Button gradient (keep same color for no gradient)
                 //   ButtonBorder: ButtonBorder, //Line Button Border Color
                 ButtonRaduis: ButtonRaduis, // Line Button Raduis
                 Cursor: Cursor, // Cursor style on button hover, for more: https://developer.mozilla.org/fr/docs/Web/CSS/cursor

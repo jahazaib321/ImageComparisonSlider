@@ -240,6 +240,7 @@
                     mainDiv = el.querySelector(mainDivClass);
                     // Adjust the slider
                     let width = mainDiv.getBoundingClientRect().width+'px';
+                    console.log(width);
 
                     mainDiv.querySelector(resizableDivClass).querySelector('img').style.width = width;
                     mainDiv.querySelector('img').style.width = width;
