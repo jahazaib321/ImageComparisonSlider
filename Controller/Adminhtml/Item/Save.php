@@ -19,14 +19,12 @@ class Save extends Action
         SliderFactory    $sliderFactory,
         ImageUploader    $imageUploader,
         DataObjectHelper $dataObjectHelper
-    )
-    {
+    ) {
         $this->sliderFactory = $sliderFactory;
         $this->imageUploader = $imageUploader;
         $this->dataObjectHelper = $dataObjectHelper;
         parent::__construct($context);
     }
-
 
     /**
      * @throws LocalizedException
@@ -53,11 +51,10 @@ class Save extends Action
 
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
-                dd($slide);
+//                dd($slide);
                 $model->setData($slide)->save();
                 $this->messageManager->addSuccessMessage(__('You saved this data.'));
                 $this->_getSession()->setFormData(false);
-
             } catch (\Magento\Framework\Exception\LocalizedException $e) {
                 $this->messageManager->addErrorMessage($e->getMessage());
             } catch (\RuntimeException $e) {
@@ -86,7 +83,6 @@ class Save extends Action
         return $slide;
     }
 
-
     public function after_desktop_image(array $rawData)
     {
         $slide = $rawData;
@@ -101,7 +97,6 @@ class Save extends Action
         return $slide;
     }
 
-
     public function before_mobile_image(array $rawData)
     {
         $slide = $rawData;
@@ -115,7 +110,6 @@ class Save extends Action
         }
         return $slide;
     }
-
 
     public function after_mobile_image(array $rawData)
     {
