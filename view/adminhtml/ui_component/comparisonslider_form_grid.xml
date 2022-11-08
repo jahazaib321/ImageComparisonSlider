@@ -382,7 +382,7 @@
                 <item name="config" xsi:type="array">
                     <item name="indexField" xsi:type="string">id</item>
                     <item name="urlEntityParamName" xsi:type="string">id</item>
-                    <item name="sortOrder" xsi:type="number">16</item>
+                    <item name="sortOrder" xsi:type="number">100</item>
                     <item name="buttons" xsi:type="array">
                         <item name="edit" xsi:type="array">
                             <item name="urlPath" xsi:type="string">comparisonslider/item/editaction</item>
