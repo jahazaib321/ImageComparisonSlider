@@ -53,7 +53,7 @@ class Save extends Action
 
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
-//                dd($slide);
+                dd($slide);
                 $model->setData($slide)->save();
                 $this->messageManager->addSuccessMessage(__('You saved this data.'));
                 $this->_getSession()->setFormData(false);

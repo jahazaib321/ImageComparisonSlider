@@ -3,49 +3,39 @@
 
 ?>
 
-    <?php foreach ($block->getSlider() as $slider): ?>
-    <p>
-        <?php echo $slider->getSetTitle(); ?>: <?php echo $slider->getBeforeDesktopImage(); ?>
-        <?php echo $slider->getAfterDesktopImage(); ?>: <?php echo $slider->getBeforeMobileImage(); ?>
-        <?php echo $slider->getAfterMobileImage(); ?>: <?php echo $slider->getDragIcon(); ?>
-        <?php echo $slider->getComparisonDirection(); ?>: <?php echo $slider->getDragFrom(); ?>
-        <?php echo $slider->getMaxDrag(); ?>: <?php echo $slider->getMinDrag(); ?>
-        <?php echo $slider->getIconSize(); ?>: <?php echo $slider->getIconColor(); ?>
-        <?php echo $slider->getLineColor(); ?>: <?php echo $slider->getButtonRadius(); ?>
-        <?php echo $slider->getCursor(); ?>: <?php echo $slider->getButtons(); ?>
-        <?php echo $slider->getButtonsTextAfter(); ?>: <?php echo $slider->getButtonsTextBefore(); ?>
-    </p>
-    <?php endforeach; ?>
 
+<?php //echo $block->getSlider()->getComparisonDirection(); ?>
 
 <div id="test"></div>
-<div class="test slider"></div>
+<!--<div class="test slider"></div>-->
 
 <script>
     require(['jquery', 'beforeEffectslider'], function($, beforeEffectslider) {
         beforeEffectslider({
             Selector: "#test", // Element that the slider will be build in
-            Vertical: true, // this Slider is Vertical! (false is default value)
-            BeforeImage: "https://images.unsplash.com/photo-1578916171728-46686eac8d58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHN0b3JlfGVufDB8fDB8fA%3D%3D&w=1000&q=80", // Before Image
+            Vertical: <?php echo $block->getSlider()->getComparisonDirection(); ?>, // this Slider is Vertical! (false is default value)
+            BeforeImage: <?php echo $block->getSlider()->getBeforeDesktopImage(); ?>,
+            // Before Image
             BeforeAlt: "Before_image", // Before Image Alt
-            AfterImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA5z5LY4wakpddDTG4n_zS-OjevCKvEqeTSoJVGQu_&s", // After Image
+            AfterImage: <?php echo $block->getSlider()->getAfterDesktopImage(); ?>, // After Image
+            ImageURL: <?php echo $block->getStoreMediaPathUrl(''); ?>, // Image url
             AftereAlt: "After_image", // After Image Alt
-            DragFrom: 50, // Percent % of before Image
-            MaxDrag: 30, //Max drag from right or bottom if vertical
-            MinDrag: 20, //Min drag from left or top if vertical
-            DragIcon: "↨", //no html, only codes
-            IconSize: 10, //Icon size
-            IconColor: "red", //Icon Color
-            LineColor: "#29732A", //Line Color
+            DragFrom: <?php echo $block->getSlider()->getDragFrom(); ?>, // Percent % of before Image
+            MaxDrag: <?php echo $block->getSlider()->getMaxDrag(); ?>, //Max drag from right or bottom if vertical
+            MinDrag: <?php echo $block->getSlider()->getMinDrag(); ?>, //Min drag from left or top if vertical
+            DragIcon: <?php echo $block->getSlider()->getDragIcon(); ?>, //no html, only codes
+            IconSize: <?php echo $block->getSlider()->getIconSize(); ?>, //Icon size
+            IconColor: <?php echo $block->getSlider()->getIconColor(); ?>, //Icon Color
+            LineColor: <?php echo $block->getSlider()->getLineColor(); ?>, //Line Color
             ButtonGradient: ["#13B135", "red"], // Line Button gradient (keep same color for no gradient)
             ButtonBorder: "none", //Line Button Border Color
-            ButtonRaduis: 0, // Line Button Raduis
-            Cursor: "grab", // Cursor style on button hover, for more: https://developer.mozilla.org/fr/docs/Web/CSS/cursor
-            Buttons: true, // Show before and after buttons ?
+            ButtonRaduis: <?php echo $block->getSlider()->getButtonRadius(); ?>, // Line Button Raduis
+            Cursor: <?php echo $block->getSlider()->getCursor(); ?>, // Cursor style on button hover, for more: https://developer.mozilla.org/fr/docs/Web/CSS/cursor
+            Buttons: <?php echo $block->getSlider()->getButtons(); ?>, // Show before and after buttons ?
             ButtonsText: {
                 //After Before Buttons Texts
-                after: "Edited",
-                before: "Taha Ahmed",
+                after: <?php echo $block->getSlider()->getButtonsTextAfter(); ?>,
+                before: <?php echo $block->getSlider()->getButtonsTextBefore(); ?>,
             },
             Border: {
                 // Border properties
