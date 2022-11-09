@@ -1,14 +1,14 @@
 .before-effect-main-div { /* plugin main div */
     position: relative;
     overflow: hidden;
-    width:100%;
-    margin:70px auto 0;
-    border-radius:5px;
+    width: 100%;
+    margin: 70px auto 0;
+    border-radius: 5px;
 }
 
 .before-effect-main-div img { /* it's images */
     width: 100%;
-    display:block;
+    display: block;
     pointer-events: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -19,36 +19,37 @@
 
 .before-effect-resizable-div { /* resizable div*/
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     overflow: hidden;
 }
 
+
 .before-effect-line { /* Tha seperator line */
-    position:absolute;
-    left:50%;
-    top:0;
-    bottom:0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
     /*width:4px;*/
-    margin-left:-2px;
+    margin-left: -2px;
     background: var(--LineColor);
     Cursor: var(--Cursor);
 }
 
-.before-effect-line:after {  /* Line middle button */
+.before-effect-line:after { /* Line middle button */
     text-align: center;
     position: absolute;
-    color:var(--IconColor);
+    color: var(--IconColor);
     top: var(--IconPosT);
     right: var(--IconPosR);
     width: 56px;
     height: 56px;
     margin: -28px 0 0 -28px;
     transition: all 0.2s;
-    content:var(--icon);
+    content: var(--icon);
     background-image: linear-gradient(180deg, var(--buttonG1) 0%, var(--buttonG2) 100%);
     border: 1px solid var(--ButtonBorder);
-    background-size:56px;
+    background-size: 56px;
     border-radius: var(--ButtonRaduis);
     font-size: var(--IconSize);
     line-height: 52px;
@@ -89,7 +90,8 @@
     /*z-index: 9;*/
 }
 
-@media screen and (max-width: 1000px) { /* some responsive */
+@media screen and (max-width: 1000px) {
+    /* some responsive */
     .before-effect-line:after {
         width: 28px;
         height: 28px;

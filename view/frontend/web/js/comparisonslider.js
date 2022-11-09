@@ -7,7 +7,6 @@ define(["uiComponent", "jquery", "beforeEffectslider"], function (
     return Component.extend({
         image: null,
         initialize: function (config, node) {
-            console.log("config", config);
             const ID = config.ID;
             const Vertical = config.Vertical;
             const BeforeImage = config.BeforeImage;
@@ -93,10 +92,10 @@ define(["uiComponent", "jquery", "beforeEffectslider"], function (
                 IconSize: IconSize, //Icon size
                 IconColor: IconColor, //Icon Color
                 LineColor: LineColor, //Line Color
-                ButtonGradient: ["red", "yellow"], // Line Button gradient (keep same color for no gradient)
+                // ButtonGradient: ["red", "yellow"], // Line Button gradient (keep same color for no gradient)
                 //   ButtonBorder: ButtonBorder, //Line Button Border Color
                 ButtonRaduis: ButtonRaduis, // Line Button Raduis
-                Cursor: Cursor, // Cursor style on button hover, for more: https://developer.mozilla.org/fr/docs/Web/CSS/cursor
+                Cursor: Cursor,
                 Buttons: Buttons, // Show before and after buttons ?
                 ButtonsText: {
                     //After Before Buttons Texts
