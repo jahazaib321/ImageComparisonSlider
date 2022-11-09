@@ -1,13 +1,3 @@
-/*
-*
-* before-effect-slider.js | V 1.0
-*
-* Copyright (C) 2020 Amine Jafur
-*
-* www.aminejafur.com/beforeEffectslider
-*
-*/
-
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         define([], function () {
