@@ -125,17 +125,19 @@ class Save extends Action
         return $slide;
     }
 
+//    Add By Me
     public function drag_icon(array $rawData)
     {
         $slide = $rawData;
-        if (isset($slide['drag_icon'][0]['tmp_name'])) {
-            $slide['drag_icon'] = $slide['drag_icon'][0]['name'];
-            $slide['drag_icon'] = $this->imageUploader->moveFileFromTmp($slide['drag_icon']);
-        } elseif (isset($slide['drag_icon'][0]['name'])) {
-            $slide['drag_icon'] = $slide['drag_icon'][0]['name'];
-        } else {
-            $slide['drag_icon'] = null;
+        if (isset($slide['drag_icon'])) {
+            if(empty($slide['drag_icon'])) {
+                $slide['drag_icon'] = ":left_right_arrow:";
+            }else{
+                $slide['drag_icon'] = $slide['drag_icon'];
+            }
         }
+        // var_dump($slide['drag_icon']);
+        // exit();
         return $slide;
     }
 }
