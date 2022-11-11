@@ -4,12 +4,12 @@ $slider = $block->getSlider();
 
 ?>
 
-<div class="beforeEffectslider-<?= $slider->getId() ?>"></div>
+<div id="beforeEffectslider-<?= $slider->getId() ?>"></div>
 
 
 <script type="text/x-magento-init">
 {
-".beforeEffectslider-<?= $slider->getId() ?>":{
+"#beforeEffectslider-<?= $slider->getId() ?>":{
  "Mage4_ImageComparisonSlider/js/comparisonslider":{
             "ID": <?= $slider->getId() ?>,
             "Vertical": <?= $slider->getComparisonDirection() ?? false ?>,

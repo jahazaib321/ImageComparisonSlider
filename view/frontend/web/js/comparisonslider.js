@@ -77,7 +77,7 @@ define(["uiComponent", "jquery", "beforeEffectslider"], function (
             before
         ) {
             beforeEffectslider({
-                Selector:`.beforeEffectslider-${ID}`, // Element that the slider will be build in
+                Selector:`#beforeEffectslider-${ID}`, // Element that the slider will be build in
                 Vertical: Vertical, // this Slider is Vertical! (false is default value)
                 BeforeImage: BeforeImage, // Before Image
                 BeforeImageMobile: BeforeImageMobile, //Image for mobile
