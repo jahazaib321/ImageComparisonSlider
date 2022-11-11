@@ -125,4 +125,22 @@ class Save extends Action
         return $slide;
     }
 
+<<<<<<< HEAD
+=======
+//    Add By Me
+    public function drag_icon(array $rawData)
+    {
+        $slide = $rawData;
+        if (isset($slide['drag_icon'])) {
+            if(empty($slide['drag_icon'])) {
+                $slide['drag_icon'] = ":left_right_arrow:";
+            }else{
+                $slide['drag_icon'] = $slide['drag_icon'];
+            }
+        }
+        // var_dump($slide['drag_icon']);
+        // exit();
+        return $slide;
+    }
+>>>>>>> 25113b2348fc751228b5147faae65f6f8099cd5d
 }
