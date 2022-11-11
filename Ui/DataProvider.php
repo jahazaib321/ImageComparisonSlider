@@ -59,15 +59,6 @@ class DataProvider extends AbstractDataProvider
                     'url' => 'http://jahazaib.local/pub/media/' . 'mage4/comparisonslider/image/' . $after_mobile_image
                 ];
             }
-
-            if (isset($data['drag_icon'])) {
-                $dragicon = $data['drag_icon'];
-                unset($data['drag_icon']);
-                $data['drag_icon'][0] = [
-                    'name' => $dragicon,
-                    'url' => 'http://jahazaib.local/pub/media/' . 'mage4/comparisonslider/image/' . $dragicon
-                ];
-            }
             $result[$item->getId()] = $data;
         }
 //        dd($data);

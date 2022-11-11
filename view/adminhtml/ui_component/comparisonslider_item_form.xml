@@ -224,6 +224,9 @@
                     <item name="label" xsi:type="string" translate="true">Drag Icon</item>
                     <item name="formElement" xsi:type="string">select</item>
                     <item name="caption" xsi:type="string">--Please Select--</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>
