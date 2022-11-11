@@ -167,7 +167,13 @@
                 resizeDiv.style.height = defaults.Vertical ? `${defaults.DragFrom}%` : '100%';
 
                 afterImage = createNode("img");
-                afterImage.src = defaults.AfterImage;
+                // for mobile
+                if (window.innerWidth > 768) {
+                    afterImage.src = defaults.AfterImage;
+                } else {
+                    afterImage.src = defaults.AfterImageMobile;
+                }
+
                 afterImage.alt = defaults.AftereAlt;
                 append(resizeDiv, afterImage);
                 append(mainDiv, resizeDiv);
