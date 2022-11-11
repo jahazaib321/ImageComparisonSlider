@@ -49,7 +49,6 @@ class Save extends Action
             $slide = $this->before_mobile_image($slide);
             $slide = $this->after_mobile_image($slide);
 
-
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
 //                dd($slide);
