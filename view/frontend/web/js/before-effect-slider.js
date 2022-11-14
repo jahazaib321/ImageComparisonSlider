@@ -128,6 +128,7 @@
                 mainDiv = createNode("div");
                 mainDiv.classList.add('before-effect-main-div');
                 beforeImage = createNode("img");
+                // before mobile
                 if (window.innerWidth > 768) {
                     beforeImage.src = defaults.BeforeImage;
                 } else {
@@ -167,7 +168,7 @@
                 resizeDiv.style.height = defaults.Vertical ? `${defaults.DragFrom}%` : '100%';
 
                 afterImage = createNode("img");
-                // for mobile
+                // for After mobile
                 if (window.innerWidth > 768) {
                     afterImage.src = defaults.AfterImage;
                 } else {
