@@ -2,22 +2,26 @@
 
 namespace Mage4\ImageComparisonSlider\Ui;
 
+use Magento\Store\Model\StoreManagerInterface;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 
 class DataProvider extends AbstractDataProvider
 {
     protected $collection;
+    protected $storeManager;
 
     public function __construct(
         $name,
         $primaryFieldName,
         $requestFieldName,
         $collectionFactory,
+        StoreManagerInterface $storeManager,
         array $meta = [],
         array $data = []
     ) {
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->collection = $collectionFactory->create();
+        $this->storeManager = $storeManager;
     }
     public function getData()
     {
@@ -29,7 +33,7 @@ class DataProvider extends AbstractDataProvider
                 unset($data['before_desktop_image']);
                 $data['before_desktop_image'][0] = [
                     'name' => $before_desktop_image,
-                    'url' => 'http://jahazaib.local/pub/media/' . 'mage4/comparisonslider/image/' . $before_desktop_image
+                    'url' => $this->storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'mage4/comparisonslider/image/' . $before_desktop_image
                 ];
             }
 
@@ -38,7 +42,7 @@ class DataProvider extends AbstractDataProvider
                 unset($data['after_desktop_image']);
                 $data['after_desktop_image'][0] = [
                     'name' => $after_desktop_image,
-                    'url' => 'http://jahazaib.local/pub/media/' . 'mage4/comparisonslider/image/' . $after_desktop_image
+                    'url' => $this->storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'mage4/comparisonslider/image/' . $after_desktop_image
                 ];
             }
 
@@ -47,7 +51,7 @@ class DataProvider extends AbstractDataProvider
                 unset($data['before_mobile_image']);
                 $data['before_mobile_image'][0] = [
                     'name' => $before_mobile_image,
-                    'url' => 'http://jahazaib.local/pub/media/' . 'mage4/comparisonslider/image/' . $before_mobile_image
+                    'url' => $this->storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'mage4/comparisonslider/image/' . $before_mobile_image
                 ];
             }
 
@@ -56,7 +60,7 @@ class DataProvider extends AbstractDataProvider
                 unset($data['after_mobile_image']);
                 $data['after_mobile_image'][0] = [
                     'name' => $after_mobile_image,
-                    'url' => 'http://jahazaib.local/pub/media/' . 'mage4/comparisonslider/image/' . $after_mobile_image
+                    'url' => $this->storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'mage4/comparisonslider/image/' . $after_mobile_image
                 ];
             }
             $result[$item->getId()] = $data;
