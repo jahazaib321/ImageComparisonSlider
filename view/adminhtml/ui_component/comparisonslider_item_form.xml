@@ -239,6 +239,9 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="validate-number" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>
@@ -251,6 +254,9 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="validate-number" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>
@@ -263,6 +269,9 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="validate-number" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>
@@ -275,6 +284,9 @@
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="dataType" xsi:type="string">text</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="validate-number" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>
@@ -304,6 +316,9 @@
                     <item name="notice" xsi:type="string" translate="true">Line Button Radius</item>
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="formElement" xsi:type="string">input</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="validate-number" xsi:type="boolean">true</item>
+                    </item>
                 </item>
             </argument>
         </field>

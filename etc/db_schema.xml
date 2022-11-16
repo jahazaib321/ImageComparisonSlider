@@ -9,13 +9,13 @@
         <column xsi:type="text" name="after_mobile_image" nullable="false" />
         <column xsi:type="text" name="drag_icon" nullable="false" />
         <column xsi:type="text" name="comparison_direction" nullable="true" comment="Comparison Direction" />
-        <column xsi:type="int" name="drag_from" nullable="true" comment="Drag From" />
-        <column xsi:type="int" name="max_drag" nullable="true" comment="Max Drag" />
-        <column xsi:type="int" name="min_drag" nullable="true" comment="Min Drag" />
-        <column xsi:type="int" name="icon_size" nullable="true" comment="Icon Size" />
+        <column xsi:type="float" name="drag_from" nullable="true" comment="Drag From" />
+        <column xsi:type="float" name="max_drag" nullable="true" comment="Max Drag" />
+        <column xsi:type="float" name="min_drag" nullable="true" comment="Min Drag" />
+        <column xsi:type="float" name="icon_size" nullable="true" comment="Icon Size" />
         <column xsi:type="text" name="icon_color" nullable="true" comment="Icon Color"/>
         <column xsi:type="text" name="line_color" nullable="true" comment="Line Color"/>
-        <column xsi:type="int" name="button_radius" nullable="true" comment="Button Radius" />
+        <column xsi:type="float" name="button_radius" nullable="true" comment="Button Radius" />
         <column xsi:type="text" name="cursor" nullable="true" comment="Cursor" />
         <column xsi:type="boolean" name="buttons" nullable="true" comment="Buttons" />
         <column xsi:type="text" name="buttons_text_after" nullable="true" comment="Buttons Text After"/>
