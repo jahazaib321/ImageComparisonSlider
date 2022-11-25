@@ -11,4 +11,3 @@ class Index extends \Magento\Backend\App\Action
         return $this->resultFactory->create(ResultFactory::TYPE_PAGE);
     }
 }
-

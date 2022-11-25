@@ -11,25 +11,28 @@ use Magento\Framework\Exception\LocalizedException;
 
 class Save extends Action
 {
-    private $sliderFactory;
-    private $imageUploader;
+    private SliderFactory $sliderFactory;
+    private ImageUploader $imageUploader;
 
+    /**
+     * @param Context $context
+     * @param SliderFactory $sliderFactory
+     * @param ImageUploader $imageUploader
+     * @param DataObjectHelper $dataObjectHelper
+     * @throws LocalizedException
+     */
     public function __construct(
         Context          $context,
         SliderFactory    $sliderFactory,
         ImageUploader    $imageUploader,
         DataObjectHelper $dataObjectHelper
-    )
-    {
+    ) {
         $this->sliderFactory = $sliderFactory;
         $this->imageUploader = $imageUploader;
         $this->dataObjectHelper = $dataObjectHelper;
         parent::__construct($context);
     }
 
-    /**
-     * @throws LocalizedException
-     */
     public function execute()
     {
         $slide = $this->getRequest()->getParams();
@@ -51,7 +54,6 @@ class Save extends Action
 
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
-//                dd($slide);
                 $model->setData($slide)->save();
                 $this->messageManager->addSuccessMessage(__('You saved this data.'));
                 $this->_getSession()->setFormData(false);
@@ -125,4 +127,3 @@ class Save extends Action
         return $slide;
     }
 }
-

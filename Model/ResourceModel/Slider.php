@@ -14,4 +14,3 @@ class Slider extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
         $this->_init('mage4_comparisonslider_managesliders_new', 'id');
     }
 }
-

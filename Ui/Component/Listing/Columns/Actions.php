@@ -72,5 +72,3 @@ class Actions extends \Magento\Ui\Component\Listing\Columns\Column
         return $dataSource;
     }
 }
-
-

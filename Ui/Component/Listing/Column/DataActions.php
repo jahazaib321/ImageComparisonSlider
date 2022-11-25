@@ -78,5 +78,3 @@ class DataActions extends Column
         return $dataSource;
     }
 }
-
-

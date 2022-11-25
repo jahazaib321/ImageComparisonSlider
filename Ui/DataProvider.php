@@ -19,6 +19,16 @@ class DataProvider extends AbstractDataProvider
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->collection = $collectionFactory->create();
     }
+    public function addFilter(\Magento\Framework\Api\Filter $filter)
+    {
+        $field = $filter->getField();
+
+        if (in_array($field, ['id','name'])) {
+            $filter->setField($field);
+        }
+
+        parent::addFilter($filter);
+    }
     public function getData()
     {
         $result = [];

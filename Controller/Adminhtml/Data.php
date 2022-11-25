@@ -61,8 +61,7 @@ abstract class Data extends Action
         PageFactory             $resultPageFactory,
         ForwardFactory          $resultForwardFactory,
         Context                 $context
-    )
-    {
+    ) {
         $this->coreRegistry = $registry;
         $this->sliderRepository = $sliderRepository;
         $this->resultPageFactory = $resultPageFactory;
@@ -70,5 +69,3 @@ abstract class Data extends Action
         parent::__construct($context);
     }
 }
-
-

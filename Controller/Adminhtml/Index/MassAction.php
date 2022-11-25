@@ -75,5 +75,3 @@ class MassAction extends Action
         return $this->_authorization->isAllowed('Mage4_ImageComparisonSlider::mass_delete');
     }
 }
-
-

@@ -31,4 +31,3 @@ class Upload extends Action
         return $this->resultFactory->create(ResultFactory::TYPE_JSON)->setData($result);
     }
 }
-

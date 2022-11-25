@@ -125,4 +125,3 @@ class Image extends Column
         return $dataSource;
     }
 }
-

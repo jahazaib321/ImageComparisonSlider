@@ -26,4 +26,3 @@ class Slider extends \Magento\Framework\Model\AbstractModel implements
         return [self::CACHE_TAG . '_' . $this->getId()];
     }
 }
-

@@ -19,8 +19,8 @@ class Delete extends Generic implements ButtonProviderInterface
                 'label' => __('Delete Data'),
                 'class' => 'delete',
                 'on_click' => 'deleteConfirm(\'' . __(
-                        'Are you sure you want to do this?'
-                    ) . '\', \'' . $this->getDeleteUrl() . '\')',
+                    'Are you sure you want to do this?'
+                ) . '\', \'' . $this->getDeleteUrl() . '\')',
                 'sort_order' => 20,
             ];
         }
@@ -37,5 +37,3 @@ class Delete extends Generic implements ButtonProviderInterface
         return $this->getUrl('*/*/delete', ['id' => $this->getId()]);
     }
 }
-
-
