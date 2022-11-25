@@ -38,7 +38,7 @@
         <exportButton name="export_button"/>
         <filterSearch name="fulltext"/>
         <filters name="listing_filters"/>
-        
+
         <filters name="listing_filters">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
