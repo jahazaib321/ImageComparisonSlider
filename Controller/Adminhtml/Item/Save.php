@@ -36,6 +36,9 @@ class Save extends Action
     public function execute()
     {
         $slide = $this->getRequest()->getParams();
+        $slide['set_title'] = trim($slide['set_title']);
+//        $trim('set_title');
+//        dd($trim);
 
         $resultRedirect = $this->resultRedirectFactory->create();
         if ($slide) {
@@ -54,6 +57,7 @@ class Save extends Action
 
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
+//                dd($model->setData($slide));
                 $model->setData($slide)->save();
                 $this->messageManager->addSuccessMessage(__('You saved this data.'));
                 $this->_getSession()->setFormData(false);
@@ -64,7 +68,6 @@ class Save extends Action
             } catch (\Exception $e) {
                 $this->messageManager->addException($e, __('Something went wrong while saving the data.'));
             }
-
             $this->_getSession()->setFormData($slide);
             return $resultRedirect->setPath('comparisonslider/index/index', ['id' => $this->getRequest()->getParam('id')]);
         }
