@@ -92,7 +92,7 @@ class EditAction extends \Magento\Backend\App\Action
 
         $resultPage = $this->_initAction();
         $resultPage->addBreadcrumb($id ? __('Edit Form') : __('New Form'), $id ? __('Edit Form') : __('New Form'));
-        $resultPage->getConfig()->getTitle()->prepend(__('Grids'));
+        $resultPage->getConfig()->getTitle();
         $resultPage->getConfig()->getTitle()->prepend($model->getId() ? $model->getTitle() : __('New Form'));
 
         return $resultPage;

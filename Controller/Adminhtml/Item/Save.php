@@ -36,7 +36,7 @@ class Save extends Action
     public function execute()
     {
         $slide = $this->getRequest()->getParams();
-        $slide['set_title'] = trim($slide['set_title']);
+        $slide['set_title'] = trim($slide['set_title'], "         ");
 //        $trim('set_title');
 //        dd($trim);
 
@@ -57,7 +57,6 @@ class Save extends Action
 
             try {
                 $this->dataObjectHelper->populateWithArray($model, $slide, Action::class);
-//                dd($model->setData($slide));
                 $model->setData($slide)->save();
                 $this->messageManager->addSuccessMessage(__('You saved this data.'));
                 $this->_getSession()->setFormData(false);
