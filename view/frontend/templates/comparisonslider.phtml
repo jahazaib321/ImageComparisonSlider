@@ -1,11 +1,13 @@
 <?php
 /* @var Mage4\ImageComparisonSlider\Block\Slider\Slider $block */
 $slider = $block->getSlider();
+$image = $this->helper('Mage4\ImageComparisonSlider\Helper\Image');
 
 ?>
 
 <div id="beforeEffectslider-<?= $slider->getId() ?>"></div>
-
+<img src="<?php $image->resize(($slider->getBeforeDesktopImage()), 1920, 700); ?>">
+<img src="<?php $image->resize(($slider->getAfterDesktopImage()), 1920, 700); ?>">
 
 <script type="text/x-magento-init">
 {

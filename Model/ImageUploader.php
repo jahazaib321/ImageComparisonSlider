@@ -11,18 +11,18 @@ use Psr\Log\LoggerInterface;
 class ImageUploader extends \Magento\Catalog\Model\ImageUploader
 {
     public function __construct(
-        Database $coreFileStorageDatabase,
-        Filesystem $filesystem,
-        UploaderFactory $uploaderFactory,
+        Database              $coreFileStorageDatabase,
+        Filesystem            $filesystem,
+        UploaderFactory       $uploaderFactory,
         StoreManagerInterface $storeManager,
-        LoggerInterface $logger,
-        $baseTmpPath,
-        $basePath,
-        $allowedExtensions,
-        $allowedMimeTypes = []
-    ) {
+        LoggerInterface       $logger,
+                              $baseTmpPath,
+                              $basePath,
+                              $allowedExtensions,
+                              $allowedMimeTypes = []
+    )
+    {
         parent::__construct($coreFileStorageDatabase, $filesystem, $uploaderFactory, $storeManager, $logger, $baseTmpPath, $basePath, $allowedExtensions, $allowedMimeTypes);
     }
-
-    //todo: for later logic override use
 }
+
